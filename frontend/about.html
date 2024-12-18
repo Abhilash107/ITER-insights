@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6afefce1fa.js" crossorigin="anonymous"></script>
     <title>About Us - ITER INSIGHTS</title>
     <style>
         body {
@@ -10,13 +12,16 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll during animation */
         }
 
         header {
-            background-color: #dbae34;
+            background-color: #1486dc;
             color: #fff;
             text-align: center;
             padding: 20px;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.1s;
         }
 
         section {
@@ -26,6 +31,9 @@
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
         }
 
         h2 {
@@ -39,47 +47,112 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #cfb108;
+            background-color: #1486dc;
             color: #fff;
             position: fixed;
             bottom: 0;
             width: 100%;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.1s;
+        }
+
+        .tags{
+            cursor: pointer;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .contact-info {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.01rem;
+            line-height: 1.1;
+        }
+
+        .social-handle a {
+            margin-right: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .social-handle a:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>ITER INSIGHTS</h1>
-        <p>Your Gateway to Science, Technology, and Innovation</p>
+        <p>Your Gateway to Science, Technology, and Collaboration</p>
     </header>
 
     <section>
         <h2>About Us</h2>
 
-        <p>Welcome to ITER INSIGHTS! We are passionate about delivering a unique perspective on the world of science, technology, and innovation. Our mission is to bring you the latest insights, breakthroughs, and discoveries from the fascinating realm of ITER and beyond.</p>
+        <p>Welcome to ITER INSIGHTS! We are a platform designed to bring the college community closer through insights,
+            collaboration, and innovation. Our mission is to foster a culture of sharing knowledge, celebrating
+            achievements, and inspiring curiosity among students, faculty, and alumni.</p>
 
         <h3>What Sets Us Apart</h3>
 
         <ul>
-            <li><strong>Cutting-Edge Content:</strong> Dive into the forefront of new Development in and around ITER. Stay informed about the latest advancements, experiments, and scientific achievements.</li>
-            <li><strong>Educational Resources:</strong> Whether you're a seasoned scientist or a curious mind, our platform offers a wealth of educational resources, making complex topics accessible and engaging.</li>
-            <li><strong>Community Engagement:</strong> Join a vibrant community of science enthusiasts, researchers, and learners. Share your thoughts, ask questions, and connect with like-minded individuals from around the globe.</li>
+            <li><strong>Campus Highlights:</strong> Stay updated on the latest campus events, projects, and
+                achievements. Celebrate the milestones of our vibrant college community.</li>
+            <li><strong>Learning Resources:</strong> Access a variety of educational materials, workshops, and
+                resources to help you grow academically and personally.</li>
+            <li><strong>Community Connection:</strong> Be part of an interactive space to share ideas, ask questions,
+                and engage with peers, mentors, and alumni. Build meaningful connections and collaborations.</li>
         </ul>
 
         <h3>Connect With Us</h3>
 
-        <p>Follow ITER INSIGHTS for a front-row seat to the future of energy and technology. Let's embark on a journey of discovery together!</p>
+        <p>Join ITER INSIGHTS to stay informed, involved, and inspired! Together, let's make our college journey
+            unforgettable!</p>
 
-        <p><strong>Website:</strong> <a href="https://www.iterinsights.com" target="_blank">www.iterinsights.com</a></p>
-        <p><strong>Email:</strong> info@iterinsights.com</p>
-        <p><strong>Social Media:</strong> <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Instagram</a>, <a href="#" target="_blank">LinkedIn</a></p>
+        <section class="contact-info">
+
+            <p><strong>Website:</strong> <a href="https://www.iterinsights.com" target="_blank">www.iterinsights.com</a></p>
+            <p><strong>Email:</strong> abhilashmishrar1@gmail.com</p>
+            <div class="social-handle">
+                <p><strong>Explore More:</strong>
+                    <a href="https://www.instagram.com/me_nobody107/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ec261f;"></i></a>
+                    <a href="https://www.linkedin.com/in/abhilash107/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #74C0FC;"></i></a>
+
+                    <a href="https://github.com/Abhilash107/ITER-insights" target="_blank"> <i class="fa-brands fa-github" style="color: #000000;"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+
     </section>
 
     <footer>
-        <p>Thank you for being part of the ITER INSIGHTS community. Let's explore the limitless possibilities of science and innovation!</p>
-        <p>#ITERInsights #ScienceExploration #InnovationJourney</p>
+        <p>Thank you for being an active member of the ITER INSIGHTS community!</p>
+        <p class="tags"><b>#ITERInsights</b> <b>#CollegeLife</b> <b>#InnovateTogether</b></p>
     </footer>
 
 </body>
+
 </html>
