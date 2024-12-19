@@ -4,211 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="whiteboard.style.css">
     <title>College Community</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0c0c0cd9;
-            color: #fff;
-            height: 100vh;
-        }
-
-        header {
-            background-color: #222;
-            text-align: center;
-            padding: 10px;
-        }
-
-        section {
-            width: 100%; /* Set width to 100% */
-            padding: 20px;
-            box-sizing: border-box; /* Include padding in width */
-            background-color: #444;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            position: relative; /* Make section relative for absolute positioning */
-        }
-
-        h2 {
-            color: #fff;
-            display: flex;
-            justify-content: space-between; /* Align items to the right */
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        input[type="text"], textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            border: 1px solid #888;
-            border-radius: 4px;
-            background-color: #323131;
-            color: #fff;
-        }
-
-        button {
-            background-color: #b2afaf;
-            color: #393939;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        button:hover {
-            background-color: #2b2b2b;
-            color: #adabab;
-            box-shadow: 0 0 10px 2px cyan;
-        }
-
-        .post {
-            background-color: #373737;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .profile-photo {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 10px;
-            object-fit: cover;
-        }
-
-        .user-details {
-            flex-grow: 1;
-            color: #fff;
-            margin-left: 10px;
-        }
-
-        .post img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .comment {
-            background-color: #666;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 4px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .comment p {
-            margin: 5px 0;
-        }
-
-        .comment textarea {
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            background-color: #222;
-            text-align: center;
-            padding: 10px;
-            bottom: 0;
-            width: 98.6%;
-        }
-
-        /* News Button Styles */
-        #newsButton {
-            background-color: #222;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            animation: blink 2s infinite; /* Blinking animation every 2 seconds */
-        }
-
-        /* News Modal Styles */
-        #newsModal {
-            display: none;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 600px;
-            height: 600px;
-            justify-content: center;
-            align-items: center;
-            border:2px solid whitesmoke;
-            margin-right: 10px;
-            overflow-x: auto;
-        }
-
-        #newsModal::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-        }
-
-        .news-content {
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .news-item {
-            margin-bottom: 10px;
-            border-bottom: 1px solid #888;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .news-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-           background-color: #e16262;
-            cursor: pointer;
-            font-size: larger;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0.5;
-            }
-        }
-    </style>
+    
 </head>
 <body>
 
     <header>
-        <h1><i>InSight_WhiteBoard</i></h1>
+        <h1><i>InSight Notices</i></h1>
     </header>
 
     <section>
@@ -224,31 +27,32 @@
             <button type="submit">Post</button>
         </form>
 
-        <!-- Dummy Posts -->
-        <!-- Post 1 -->
+        
         <div class="post">
+
             <div class="user-info">
-                <img src="images 3.JPEG" alt="Profile Photo" class="profile-photo">
+                <img src="user_pic.jpg" alt="Profile Photo" class="profile-photo">
                 <div class="user-details">
                     <h3>Student_Id:12345</h3>
                     <p>Username: student1</p>
                     <p>Role: Student</p>
                 </div>
             </div>
-            <img src="https://via.placeholder.com/800x400" alt="Post Image">
-            <p>Post text goes here...</p>
-            <p>Tags: Tag1, Tag2</p>
-            <button class="comment-btn" onclick="toggleComment(this)">Comment</button>
+            
+            <div class="notice-pic" style="background: url(whiteboard_bg.jpeg) no-repeat center center/cover; height: 400px;width: 400px;">
+                
+            </div>
+            
+            
+            <!-- <button class="comment-btn" onclick="toggleComment(this)">Comment</button> -->
             <div class="comment">
                 <textarea placeholder="Comment here"></textarea>
-                <button>Submit</button>
-                <p><strong>Student1:</strong> Comment 1</p>
-                <p><strong>Student2:</strong> Comment 2</p>
+                <button class="new-comment">Submit</button>
             </div>
         </div>
 
         <!-- Post 2 -->
-        <div class="post">
+        <!-- <div class="post">
             <div class="user-info">
                 <img src="images 3.JPEG" alt="Profile Photo" class="profile-photo">
                 <div class="user-details">
@@ -267,10 +71,10 @@
                 <p><strong>Student1:</strong> Comment 1</p>
                 <p><strong>Student3:</strong> Comment 3</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Post 3 -->
-        <div class="post">
+        <!-- <div class="post">
             <div class="user-info">
                 <img src="images 3.JPEG" alt="Profile Photo" class="profile-photo">
                 <div class="user-details">
@@ -289,10 +93,10 @@
                 <p><strong>Student2:</strong> Comment 2</p>
                 <p><strong>Student3:</strong> Comment 3</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Post 4 -->
-        <div class="post">
+        <!-- <div class="post">
             <div class="user-info">
                 <img src="images 3.JPEG" alt="Profile Photo" class="profile-photo">
                 <div class="user-details">
@@ -311,10 +115,10 @@
                 <p><strong>Student1:</strong> Comment 1</p>
                 <p><strong>Student4:</strong> Comment 4</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Post 5 -->
-        <div class="post">
+        <!-- <div class="post">
             <div class="user-info">
                 <img src="images 3.JPEG" alt="Profile Photo" class="profile-photo">
                 <div class="user-details">
@@ -333,7 +137,7 @@
                 <p><strong>Student2:</strong> Comment 2</p>
                 <p><strong>Student5:</strong> Comment 5</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- News Modal -->
         <div id="newsModal">
@@ -357,7 +161,7 @@
         &copy; 2023 College Community
     </div>
 
-    <script>
+    <!-- <script>
         function toggleComment(button) {
             const post = button.parentElement;
             const commentSection = post.querySelector('.comment');
@@ -368,7 +172,7 @@
             const newsModal = document.getElementById('newsModal');
             newsModal.style.display = newsModal.style.display === 'none' ? 'flex' : 'none';
         }
-    </script>
+    </script> -->
 
 </body>
 </html>
